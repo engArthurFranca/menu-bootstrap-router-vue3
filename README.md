@@ -1,5 +1,8 @@
 # menu-bootstrap-router-vue3
 
+A Bootstrap NavBar linked with Router
+https://engarthurfranca.github.io/menu-bootstrap-router-vue3/#/
+
 ## Project setup
 ```
 npm install

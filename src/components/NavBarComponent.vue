@@ -1,7 +1,7 @@
 ﻿<template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand">
             <img class="logo" src="../assets/logo.png">
             Logo
         </a>

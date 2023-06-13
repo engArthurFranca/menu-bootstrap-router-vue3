@@ -3,7 +3,11 @@
     <NavBarComponent></NavBarComponent>
   </header>
   <main>
-    <router-view/>
+    <router-view v-slot="{ Component }">
+      <transition name="slide-fade">
+        <component :is="Component"/>
+      </transition>
+    </router-view>
   </main>
 </template>
 
@@ -27,6 +31,19 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>
 

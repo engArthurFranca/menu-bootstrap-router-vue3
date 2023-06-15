@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { publicPath } from '../vue.config'
 import HomeView from '../views/HomeView.vue'
 import AppView from '../views/AppView.vue'
 import DocsView from '../views/DocsView.vue'
@@ -29,6 +30,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  base: publicPath,
   routes
 })
 

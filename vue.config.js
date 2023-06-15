@@ -5,3 +5,4 @@ module.exports = defineConfig({
     ? '/menu-bootstrap-router-vue3/'
     : '/'
 })
+console.log(process.env.NODE_ENV)

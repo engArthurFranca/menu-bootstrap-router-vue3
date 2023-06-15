@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item me-4" v-for="route in routes" :key="route.path">
-                <router-link :to="route.path">{{ capitalizeFirstLetter(route.name) }}</router-link>
+                <router-link class="nav-link" :to="route.path">{{ capitalizeFirstLetter(route.name) }}</router-link>
             </li>
         </ul>
         </div>

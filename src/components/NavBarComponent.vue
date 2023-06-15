@@ -10,24 +10,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <router-link class="nav-link active" to="/">Home</router-link>
-            </li>
-            <li class="nav-item">
-                <router-link class="nav-link" to="/app">App</router-link>
-            </li>
-            <li class="nav-item">
-                <router-link class="nav-link" to="/docs">Docs</router-link>
-            </li>
-            <li class="nav-item">
-                <router-link class="nav-link" to="/about">About</router-link>
+            <li class="nav-item me-4" v-for="route in routes" :key="route.path">
+                <router-link :to="route.path">{{ capitalizeFirstLetter(route.name) }}</router-link>
             </li>
         </ul>
         </div>
     </div>
     </nav>
 </template>
-
+<script>
+export default {
+    data() {
+        return {
+            routes: this.$router.getRoutes()
+        }
+    },
+    methods: {
+        capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1)
+        }
+    }
+}
+</script>
 <style scoped>
     .logo{
         height: 50px;
